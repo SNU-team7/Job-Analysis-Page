@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기술 스택 비교 분석</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>기술 스택 비교 분석</h1>
+            <p>내 기술과 시장에서 요구하는 기술을 비교하고, 부족한 부분을 보완하세요.</p>
+            <a href="sub.html" class="button">내 기술 분석하기</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="overview">
+            <h2>📈 직무별 채용 시장 규모</h2>
+            <canvas id="marketChart"></canvas>
+        </section>
+
+        <section class="tech-comparison">
+            <h2>💡 직무별 주요 기술 비교</h2>
+            <div class="card-container">
+                <div class="card" onclick="location.href='backend.html'">
+                    <h3>백엔드</h3>
+                    <p>Node.js, SQL, Docker</p>
+                </div>
+                <div class="card" onclick="location.href='frontend.html'">
+                    <h3>프론트엔드</h3>
+                    <p>JavaScript, React</p>
+                </div>
+                <div class="card" onclick="location.href='data-sc.html'">
+                    <h3>데이터 사이언스</h3>
+                    <p>Python, Pandas</p>
+                </div>
+                <div class="card" onclick="location.href='ai.html'">
+                    <h3>AI</h3>
+                    <p>Python, TensorFlow</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 기술 스택 분석 서비스</p>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>
