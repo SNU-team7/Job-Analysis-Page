@@ -13,9 +13,23 @@
     </header>
     
     <section class="comparison">
+        <!-- 선택된 기술이 상단에 나오도록 수정 -->
+        <div id="selected-skills">
+            <h3>선택한 기술</h3>
+            <div id="selected-skills-list" class="skill-buttons">
+                <!-- 선택된 기술 버튼들이 여기에 추가됩니다 -->
+            </div>
+            <!-- 검색창을 만들어서 사용자가 기술을 추가할 수 있게 만듭니다 -->
+            <div class="search-container">
+                <input type="text" id="skillInput" list="skills-list" class="search-input" placeholder="기술 추가..." />
+                <button class="search-button" id="addSkillButton">추가</button>
+            </div>
+        </div>
+
         <div class="chart-container" style="max-width: 500px; margin: auto;">
             <canvas id="radarChart"></canvas>
         </div>
+        
         <div class="details">
             <h2>분석 결과</h2>
             <p>당신의 기술 스택과 시장에서 요구하는 기술을 비교 분석합니다.</p>

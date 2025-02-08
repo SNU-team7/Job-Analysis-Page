@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f9;
@@ -16,12 +16,54 @@ header {
 }
 
 header h1 {
-    font-size: 2.5em;
+    font-size: 3em;
 }
 
 header p {
     font-size: 1.2em;
     margin-top: 10px;
+}
+
+.search-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.search-input {
+    width: 300px;
+    padding: 12px 20px;
+    border: 2px solid #ccc;
+    border-radius: 25px;
+    font-size: 1em;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-input:focus {
+    border-color: #4a90e2;
+    box-shadow: 0 0 10px rgba(74, 144, 226, 0.5);
+    outline: none;
+}
+
+.search-button {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px 20px;
+    background: #4a90e2;
+    color: white;
+    font-weight: bold;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.search-button:hover {
+    background-color: #3d7ec4;
+    transform: scale(1.1);
 }
 
 .button {
@@ -33,11 +75,12 @@ header p {
     font-weight: bold;
     border-radius: 25px;
     text-decoration: none;
-    transition: 0.3s;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .button:hover {
     background: #f0f0f0;
+    transform: scale(1.05);
 }
 
 main {
@@ -74,15 +117,15 @@ h2 {
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: 0.3s;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
     color: black;
 }
 
 .card:hover {
     transform: translateY(-5px);
     background: #f4f4f4;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
-
 
 .badge {
     display: inline-block;
@@ -100,4 +143,90 @@ footer {
     background: #4a90e2;
     color: white;
     margin-top: 30px;
+}
+
+/* 기존 스타일 유지 */
+
+.search-container {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.search-input {
+    width: 300px;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 25px;
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+
+.search-input:focus {
+    border-color: #4a90e2;
+    outline: none;
+}
+
+.search-button {
+    background-color: #4a90e2;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.search-button:hover {
+    background-color: #357ab7;
+    transform: scale(1.05);
+}
+
+#selected-skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.skill-button {
+    background-color: #4a90e2;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 25px;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.skill-button:hover {
+    background-color: #357ab7;
+    transform: scale(1.05);
+}
+
+.delete-button {
+    position: absolute;
+    top: 2px;
+    right: 4px;
+    background-color: #ff4d4d;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 0.8em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.delete-button:hover {
+    background-color: #ff1a1a;
+}
+
+/* 추가적인 스타일링 */
+.skill-button span {
+    margin-left: 8px;
 }
